@@ -28,14 +28,14 @@ if (isset($_GET['id'])) {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Ganti sesuai layanan SMTP yang digunakan
+        $mail->Host = 'mail.rental-ku.my.id';
         $mail->SMTPAuth = true;
-        $mail->Username = 'ilhamnoorhidayat29@gmail.com'; // Email yang digunakan untuk dikirim
-        $mail->Password = 'ttuu zxto vzux kzyg';          // App password yang didapat dari generate
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Username = 'noreply@rental-ku.my.id';
+        $mail->Password = 'Jampang29';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
-        $mail->setFrom('ilhamnoorhidayat29@gmail.com', 'Rentalku');
+        $mail->setFrom('noreply@rental-ku.my.id', 'Rentalku');
         $mail->addAddress($email, $nama);
         $mail->isHTML(true);
         $mail->Subject = 'Pemberitahuan Penolakan Sewa';

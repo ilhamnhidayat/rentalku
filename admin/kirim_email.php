@@ -66,14 +66,14 @@ if (isset($_GET['id'])) {
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
+            $mail->Host = 'mail.rental-ku.my.id';
             $mail->SMTPAuth = true;
-            $mail->Username = 'ilhamnoorhidayat29@gmail.com';
-            $mail->Password = 'ttuu zxto vzux kzyg';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->Username = 'noreply@rental-ku.my.id';
+            $mail->Password = 'Jampang29';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
 
-            $mail->setFrom('ilhamnoorhidayat29@gmail.com', 'Rentalku');
+            $mail->setFrom('noreply@rental-ku.my.id', 'Rentalku');
             $mail->addAddress($d['email'], $d['nama_cust']);
 
             $mail->isHTML(true);

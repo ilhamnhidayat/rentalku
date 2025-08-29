@@ -100,15 +100,15 @@ $mail = new PHPMailer(true);
 try {
     // Konfigurasi SMTP
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'mail.rental-ku.my.id';
     $mail->SMTPAuth = true;
-    $mail->Username = 'ilhamnoorhidayat29@gmail.com';
-    $mail->Password = 'ttuu zxto vzux kzyg'; // App Password Gmail
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    $mail->Username = 'noreply@rental-ku.my.id';
+    $mail->Password = 'Jampang29';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
 
     // Pengirim & Penerima
-    $mail->setFrom('ilhamnoorhidayat29@gmail.com', 'Rentalku');
+    $mail->setFrom('noreply@rental-ku.my.id', 'Rentalku');
     $mail->addAddress($email, $nama);
 
     // Lampirkan PDF invoice
